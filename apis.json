@@ -1,0 +1,135 @@
+{
+    "name": "Intrinio",
+    "description": "Intelligent Data, On Demand. The financial data platform for developers, investors, students, and educators, with over 200 feeds including real-time, intraday, EOD, and international financial data available via REST API, WebSocket, CSV, Excel, and Goo...",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/intrinio-logo-data-intelligence-on-demand.png",
+    "tags": [
+        "api provider",
+        "financial services",
+        "free tier",
+        "general data",
+        "have api",
+        "have api key",
+        "historical data api",
+        "market data",
+        "paid tier",
+        "relative data",
+        "rest",
+        "service api",
+        "streams"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/intrinio\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Intrinio",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/intrinio-logo-data-intelligence-on-demand.png",
+            "humanURL": "http:\/\/www.intrinio.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/intrinio-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Website",
+            "url": "http:\/\/www.intrinio.com"
+        },
+        {
+            "type": "Applications",
+            "url": "https:\/\/intrinio.com\/marketplace\/apps"
+        },
+        {
+            "type": "Authentication",
+            "url": "http:\/\/docs.intrinio.com\/#authentication"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/blog.intrinio.com\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/blog.intrinio.com\/feed\/"
+        },
+        {
+            "type": "Code",
+            "url": "http:\/\/docs.intrinio.com\/#sdks"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/tribunat"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/intrinio.com\/we-love-developers"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/intrinio.com\/marketplace\/data"
+        },
+        {
+            "type": "Email",
+            "url": "cfarley@intrinio.com"
+        },
+        {
+            "type": "Email",
+            "url": "admin@intrinio.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@intrinio.com"
+        },
+        {
+            "type": "Email",
+            "url": "acarpenter@intrinio.com"
+        },
+        {
+            "type": "Login",
+            "url": "https:\/\/intrinio.com\/login"
+        },
+        {
+            "type": "Partners",
+            "url": "https:\/\/intrinio.com\/partners"
+        },
+        {
+            "type": "Press",
+            "url": "https:\/\/intrinio.com\/press"
+        },
+        {
+            "type": "Rate Limits",
+            "url": "http:\/\/docs.intrinio.com\/#limits"
+        },
+        {
+            "type": "Registration",
+            "url": "https:\/\/intrinio.com\/signup"
+        },
+        {
+            "type": "Spreadsheets",
+            "url": "http:\/\/docs.intrinio.com\/#spreadsheet-add-ins"
+        },
+        {
+            "type": "Support",
+            "url": "https:\/\/intrinio.com\/help"
+        },
+        {
+            "type": "Tutorials",
+            "url": "https:\/\/intrinio.com\/tutorial\/web_api"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/intrinio"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/intrinio.com"
+        }
+    ]
+}
