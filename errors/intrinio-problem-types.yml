@@ -1,0 +1,37 @@
+generated: '2026-07-22'
+method: searched
+source: https://docs.intrinio.com/documentation/api_v2/response_codes
+format: custom
+envelope:
+  description: >-
+    Errors are returned as a JSON object with "error" (short reason) and "message"
+    (detail) fields, e.g. {"error": "API Key was invalid.", "message": "API Key was
+    formatted invalidly."} (observed live on api-v2.intrinio.com).
+  fields: [error, message]
+problems:
+  - status: 200
+    title: OK
+    detail: Everything worked as expected.
+  - status: 401
+    title: Unauthorized
+    detail: Your User/Password API Keys are incorrect.
+    remediation: Check the api_key parameter or Authorization Bearer header value.
+  - status: 403
+    title: Forbidden
+    detail: You are not subscribed to the data feed requested.
+    remediation: Subscribe to the required data feed on your Intrinio account.
+  - status: 404
+    title: Not Found
+    detail: The endpoint requested does not exist.
+  - status: 429
+    title: Too Many Requests
+    detail: You have hit a limit. See the limits documentation.
+    remediation: Back off and respect bulk-request and throttle limits (https://docs.intrinio.com/documentation/api_v2/limits).
+  - status: 500
+    title: Internal Server Error
+    detail: Intrinio had a problem with their server. Try again later.
+  - status: 503
+    title: Service Unavailable
+    detail: >-
+      You have hit your throttle limit or Intrinio may be experiencing high system load.
+      Also returned when a request cannot be fulfilled within the 25-second timeout.

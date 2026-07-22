@@ -1,0 +1,1 @@
+{"resource":"https://intrinio-mcp.intrinio.com/mcp","authorization_servers":["https://intrinio-mcp.intrinio.com"],"scopes_supported":["intrinio"],"bearer_methods_supported":["header"]}

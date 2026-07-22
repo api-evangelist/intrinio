@@ -1,0 +1,54 @@
+generated: '2026-07-22'
+method: searched
+docs: https://docs.intrinio.com/documentation/api_v2/authentication
+summary:
+  types: [apiKey, http-bearer, oauth2]
+  api_key_in: [query, header]
+  oauth2_flows: [authorizationCode]
+schemes:
+  - name: api_key_query
+    type: apiKey
+    in: query
+    parameter: api_key
+    description: >-
+      Primary authentication for the Intrinio Web API v2 — include your API key as an
+      api_key URL parameter, e.g.
+      https://api-v2.intrinio.com/securities/AAPL/prices?api_key={api_key}.
+    sources: [https://docs.intrinio.com/documentation/api_v2/authentication]
+  - name: authorization_bearer
+    type: http
+    scheme: bearer
+    description: >-
+      Header alternative — send the API key as an Authorization header with the value
+      "Bearer {api_key}".
+    sources: [https://docs.intrinio.com/documentation/api_v2/authentication]
+  - name: public_api_key
+    type: apiKey
+    in: header
+    parameter: X-Authorization-Public-Key
+    description: >-
+      Public-key authentication for untrusted/client-side environments (browser
+      JavaScript). Public API keys are created on the account page and are
+      domain-restricted — requests from unlisted domains are rejected with 401.
+      localhost is whitelisted by default for development and should be removed
+      before production.
+    sources: [https://docs.intrinio.com/documentation/api_v2/authentication]
+  - name: mcp_oauth
+    type: oauth2
+    description: >-
+      The hosted Intrinio MCP server (https://intrinio-mcp.intrinio.com/mcp) uses OAuth
+      2.0 authorization-code + refresh-token grants with PKCE (S256) and anonymous
+      dynamic client registration; single scope "intrinio". API-key auth is also
+      accepted per the MCP product page.
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://intrinio-mcp.intrinio.com/authorize
+        tokenUrl: https://intrinio-mcp.intrinio.com/token
+        scopes: [intrinio]
+    sources:
+      - https://intrinio-mcp.intrinio.com/.well-known/oauth-authorization-server
+      - https://intrinio.com/mcp
+notes: >-
+  Failed authentication returns HTTP 401 with a JSON body of the shape
+  {"error": "API Key was invalid.", "message": "API Key was formatted invalidly."}
+  (observed live against api-v2.intrinio.com).

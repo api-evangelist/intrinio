@@ -1,0 +1,108 @@
+generated: '2026-07-22'
+method: searched
+source: npm, PyPI, RubyGems, NuGet registries + https://github.com/intrinio
+packages:
+  - language: javascript
+    registry: npm
+    name: intrinio-sdk
+    version: 7.2.0
+    url: https://www.npmjs.com/package/intrinio-sdk
+    install: npm install intrinio-sdk
+    official: true
+    repo: https://github.com/intrinio/javascript-sdk
+  - language: javascript
+    registry: npm
+    name: intrinio-realtime
+    version: 5.7.0
+    url: https://www.npmjs.com/package/intrinio-realtime
+    install: npm install intrinio-realtime
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-node-sdk
+    note: Real-time stock and options prices over WebSocket (IEX, delayed SIP, Nasdaq Basic, CBOE One, Equities Edge)
+  - language: python
+    registry: pypi
+    name: intrinio-sdk
+    version: 7.2.0
+    url: https://pypi.org/project/intrinio-sdk/
+    install: pip install intrinio-sdk
+    official: true
+    repo: https://github.com/intrinio/python-sdk
+  - language: python
+    registry: pypi
+    name: intriniorealtime
+    version: 6.3.0
+    url: https://pypi.org/project/intriniorealtime/
+    install: pip install intriniorealtime
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-python-sdk
+    note: Real-time equities and options WebSocket client (options SDK merged into this repo)
+  - language: ruby
+    registry: rubygems
+    name: intrinio-sdk
+    version: 7.1.0
+    url: https://rubygems.org/gems/intrinio-sdk
+    install: gem install intrinio-sdk
+    official: true
+    repo: https://github.com/intrinio/ruby-sdk
+  - language: ruby
+    registry: rubygems
+    name: intrinio-realtime
+    version: 5.3.0
+    url: https://rubygems.org/gems/intrinio-realtime
+    install: gem install intrinio-realtime
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-ruby-sdk
+  - language: csharp
+    registry: nuget
+    name: Intrinio.SDK
+    version: 8.2.0
+    url: https://www.nuget.org/packages/Intrinio.SDK
+    install: dotnet add package Intrinio.SDK
+    official: true
+    repo: https://github.com/intrinio/csharp-sdk
+  - language: csharp
+    registry: nuget
+    name: IntrinioRealTimeClient
+    version: 18.12.0
+    url: https://www.nuget.org/packages/IntrinioRealTimeClient
+    install: dotnet add package IntrinioRealTimeClient
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-csharp-sdk
+  - language: java
+    registry: github
+    name: intrinio/java-sdk
+    url: https://github.com/intrinio/java-sdk
+    install: Build from source (not published to Maven Central)
+    official: true
+    repo: https://github.com/intrinio/java-sdk
+  - language: r
+    registry: github
+    name: intrinio/r-sdk
+    url: https://github.com/intrinio/r-sdk
+    install: Install from GitHub (not published to CRAN)
+    official: true
+    repo: https://github.com/intrinio/r-sdk
+  - language: go
+    registry: github
+    name: intrinio/intrinio-realtime-go-sdk
+    url: https://github.com/intrinio/intrinio-realtime-go-sdk
+    install: go get github.com/intrinio/intrinio-realtime-go-sdk
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-go-sdk
+    note: Real-time options prices over WebSocket
+  - language: javascript
+    registry: github
+    name: intrinio/intrinio-realtime-web-sdk
+    url: https://github.com/intrinio/intrinio-realtime-web-sdk
+    install: Browser script include (see repo README)
+    official: true
+    repo: https://github.com/intrinio/intrinio-realtime-web-sdk
+    note: Browser Web SDK for real-time stock, forex, and crypto prices
+  - language: vba
+    registry: github
+    name: intrinio/intrinio-excel
+    url: https://github.com/intrinio/intrinio-excel
+    install: Excel add-in (see repo README)
+    official: true
+    repo: https://github.com/intrinio/intrinio-excel
+    note: Microsoft Excel add-in for Intrinio data

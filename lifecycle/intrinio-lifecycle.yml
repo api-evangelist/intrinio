@@ -1,0 +1,25 @@
+generated: '2026-07-22'
+method: searched
+versioning:
+  scheme: host-based
+  current: v2
+  current_build: 2.140.0
+  details: >-
+    The current Web API generation is v2, served from https://api-v2.intrinio.com. The
+    API root reports {"name":"Intrinio API","version":"2.140.0"} (probed live
+    2026-07-22). SDKs across seven languages are regenerated against the v2 surface.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  details: No published deprecation policy or RFC 8594 Sunset-header support found in the public docs.
+status_page: https://status.intrinio.com
+sla:
+  url: null
+  details: >-
+    SLA is offered on the Enterprise plan ("SLA" listed among Enterprise plan features on
+    https://intrinio.com/pricing); terms are not published publicly.
+notes: >-
+  Intrinio relaunched its platform in June 2026 ("A New Intrinio for the AI Era",
+  https://intrinio.com/blog/a-new-intrinio-for-the-ai-era) with self-serve pricing and a
+  hosted MCP server; the docs experience at docs.intrinio.com is being migrated to a new
+  documentation platform.

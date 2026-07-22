@@ -1,0 +1,50 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Intrinio
+providerId: intrinio
+generated: '2026-07-22'
+method: searched
+source: https://intrinio.com/pricing
+created: '2026-07-22'
+modified: '2026-07-22'
+description: >-
+  Published self-serve pricing for the relaunched Intrinio platform ("A New Intrinio for
+  the AI Era", June 2026). All plans include the core equity and options data feeds, MCP
+  server access, and free trials; Enterprise adds custom feeds from the catalog.
+plan_count: 3
+plans:
+  - id: intrinio-individual
+    name: Individual
+    type: paid
+    price: '150.00'
+    currency: USD
+    billing: monthly
+    trial: true
+    description: >-
+      All-in-one plan for builders and innovators: OptionsEdge and EquitiesEdge (FMV
+      real-time), US fundamentals, US EOD and historical stocks and options data, 15-min
+      delayed CBOE data, tick-level market data, GenAI/MCP integration. 1 seat, no
+      redistribution or external display, non-customizable.
+  - id: intrinio-startup
+    name: Startup
+    type: paid
+    price: '333.00'
+    currency: USD
+    billing: quarterly
+    trial: true
+    description: >-
+      Same data catalog as Individual with a business-wide license and display and
+      commercial use. Phased pricing over 12 months — $333/mo for 6 months, $666/mo for
+      6 months, $999/mo thereafter. Self-sign-up.
+  - id: intrinio-enterprise
+    name: Enterprise
+    type: enterprise
+    price: '1250.00'
+    currency: USD
+    billing: custom
+    trial: false
+    description: >-
+      Full platform access from $1,250/mo+: everything in Startup plus custom plans and
+      additional datasets, white-glove onboarding, code-level support, dedicated account
+      manager, SLA, and custom billing terms.

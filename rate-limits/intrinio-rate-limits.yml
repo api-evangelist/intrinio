@@ -1,0 +1,47 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Intrinio
+providerId: intrinio
+generated: '2026-07-22'
+method: searched
+source: https://docs.intrinio.com/documentation/api_v2/limits
+created: '2026-07-22'
+modified: '2026-07-22'
+description: >-
+  Published rate, bulk-request, throttle, and timeout limits for the Intrinio Web API v2,
+  captured from the official limits documentation.
+headers: {}
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+  serviceUnavailable: 503
+limits:
+  - tier: free
+    name: Free bulk request limit
+    type: rate
+    metric: bulk_requests_per_minute
+    limit_count: 1
+    timeFrame: minute
+    description: Free users may make 1 bulk request per minute on endpoints that support bulk requests.
+  - tier: paid
+    name: Paid bulk request limit
+    type: rate
+    metric: bulk_requests_per_second
+    limit_count: 1
+    timeFrame: second
+    description: Paid users may make 1 bulk request per second; custom limits available via sales.
+  - tier: free
+    name: Throttle limit
+    type: rate
+    metric: requests_per_second
+    limit_count: 100
+    timeFrame: second
+    description: Users with only free data feed subscriptions are limited to 100 requests per second.
+  - tier: all
+    name: Request timeout
+    type: timeout
+    metric: seconds
+    limit_count: 25
+    timeFrame: request
+    description: Each request must complete within 25 seconds or it is dropped with a 503 error.

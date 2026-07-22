@@ -1,0 +1,37 @@
+# Intrinio
+
+> Intrinio is a financial data platform providing real-time, delayed, and historical US stock prices, options data with Greeks and implied volatility, standardized and as-reported company fundamentals, analyst estimates, ETF and mutual fund holdings, indices, corporate actions, and ESG data through a REST API (api-v2.intrinio.com), WebSocket streaming feeds, bulk files, Snowflake/S3 delivery, and a hosted MCP server for AI assistants.
+
+Authentication uses an API key (api_key query parameter or Authorization: Bearer header); client-side apps use domain-restricted public keys via the X-Authorization-Public-Key header. Paged responses use a next_page cursor (default 100 records, page_size up to 10,000). Errors return {"error", "message"} JSON with standard HTTP codes (401 bad key, 403 not subscribed, 429 limits, 503 throttle/25s timeout).
+
+## APIs
+
+- [Intrinio Web API v2](https://api-v2.intrinio.com): REST API root; reports {"name":"Intrinio API","version":"2.140.0"}
+- [API Documentation](https://docs.intrinio.com/documentation/api_v2/getting_started): Getting started, endpoint reference, and tutorials
+- [Authentication](https://docs.intrinio.com/documentation/api_v2/authentication): API key, bearer, and public-key auth
+- [Paging](https://docs.intrinio.com/documentation/api_v2/paging): next_page cursor pagination
+- [Limits](https://docs.intrinio.com/documentation/api_v2/limits): Bulk, throttle, and timeout limits
+- [Response Codes](https://docs.intrinio.com/documentation/api_v2/response_codes): Error code reference
+
+## MCP
+
+- [Intrinio MCP Server](https://intrinio.com/mcp): Official hosted MCP server at https://intrinio-mcp.intrinio.com/mcp (HTTP transport, OAuth with PKCE + dynamic client registration or API key; included with all plans)
+
+## Streaming
+
+- [Real-time Node/Web SDK](https://github.com/intrinio/intrinio-realtime-node-sdk): WebSocket feeds — IEX/REALTIME, DELAYED_SIP, NASDAQ_BASIC, CBOE_ONE, EQUITIES_EDGE
+- [Real-time Python SDK](https://github.com/intrinio/intrinio-realtime-python-sdk): Equities and options streaming client
+
+## SDKs
+
+- [Python](https://pypi.org/project/intrinio-sdk/) · [JavaScript](https://www.npmjs.com/package/intrinio-sdk) · [Ruby](https://rubygems.org/gems/intrinio-sdk) · [C#](https://www.nuget.org/packages/Intrinio.SDK) · [Java](https://github.com/intrinio/java-sdk) · [R](https://github.com/intrinio/r-sdk) · [GitHub org](https://github.com/intrinio)
+
+## Company
+
+- [Pricing](https://intrinio.com/pricing): Individual $150/mo, Startup from $333/mo, Enterprise from $1,250/mo — free trials, self-serve signup
+- [Sign Up](https://account.intrinio.com/signup)
+- [Help Center](https://help.intrinio.com)
+- [API Status](https://status.intrinio.com)
+- [Blog](https://intrinio.com/blog)
+- [Terms of Service](https://about.intrinio.com/terms)
+- [Privacy Policy](https://about.intrinio.com/privacy)

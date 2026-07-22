@@ -1,0 +1,44 @@
+generated: '2026-07-22'
+method: searched
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      The hosted MCP server is an OAuth 2.0 authorization server (authorization_code +
+      refresh_token grants) — live RFC 8414 metadata at
+      https://intrinio-mcp.intrinio.com/.well-known/oauth-authorization-server.
+  - id: oauth2-pkce
+    conforms: true
+    evidence: code_challenge_methods_supported ["S256"] in the authorization-server metadata.
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint https://intrinio-mcp.intrinio.com/register advertised in RFC 8414 metadata.
+  - id: rfc8414-authorization-server-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 with valid metadata.
+  - id: rfc9728-protected-resource-metadata
+    conforms: true
+    evidence: /.well-known/oauth-protected-resource returns 200; 401 challenges reference it via resource_metadata.
+  - id: mcp
+    conforms: true
+    evidence: Official hosted Model Context Protocol server (HTTP transport) at https://intrinio-mcp.intrinio.com/mcp, announced on https://intrinio.com/mcp.
+  - id: oidc
+    conforms: false
+    evidence: No /.well-known/openid-configuration on any probed host.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {"error","message"} JSON envelope, not application/problem+json.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on intrinio.com and api-v2.intrinio.com.
+  - id: pagination-cursor
+    conforms: true
+    evidence: Documented cursor pagination via next_page parameter/response field (https://docs.intrinio.com/documentation/api_v2/paging).
+  - id: openapi
+    conforms: false
+    evidence: >-
+      No first-party machine-readable OpenAPI/Swagger for the v2 API is published; SDKs
+      are swagger-codegen generated from an internal spec, and docs are server-rendered
+      per operation. (One A/B variant of docs.intrinio.com embeds a Finnhub-branded
+      Swagger 2.0 schema — the Finnhub API contract, host finnhub.io — evidence of a new
+      docs platform, not an Intrinio API contract.)

@@ -1,0 +1,38 @@
+generated: '2026-07-22'
+method: derived
+source: https://github.com/intrinio/intrinio-realtime-node-sdk (README + index.js), https://github.com/intrinio/intrinio-realtime-python-sdk
+surface: websocket-streaming
+spec_type: none
+description: >-
+  Intrinio delivers real-time and delayed market data as an event/streaming surface over
+  two-way WebSocket connections (not HTTP webhooks, and no published AsyncAPI). Clients
+  authenticate with the REST API key against a per-feed /auth endpoint, then subscribe to
+  individual securities or the whole market on the feed's /socket/websocket endpoint.
+  First-party realtime SDKs: Node/Web, Python, Ruby, C#/.NET, Java, Go.
+feeds:
+  - name: IEX / REALTIME (Multi-Exchange)
+    auth: https://realtime-mx.intrinio.com/auth
+    websocket: wss://realtime-mx.intrinio.com/socket/websocket
+  - name: DELAYED_SIP
+    auth: https://realtime-delayed-sip.intrinio.com/auth
+    websocket: wss://realtime-delayed-sip.intrinio.com/socket/websocket
+  - name: NASDAQ_BASIC
+    auth: https://realtime-nasdaq-basic.intrinio.com/auth
+    websocket: wss://realtime-nasdaq-basic.intrinio.com/socket/websocket
+  - name: CBOE_ONE
+    auth: https://cboe-one.intrinio.com/auth
+    websocket: wss://cboe-one.intrinio.com/socket/websocket
+  - name: EQUITIES_EDGE
+    auth: https://equities-edge.intrinio.com/auth
+    websocket: wss://equities-edge.intrinio.com/socket/websocket
+events:
+  - Last trade updates (price, size, timestamp)
+  - Bid/ask quote updates
+  - Options trades and quotes (via the realtime options clients)
+replay:
+  rest_endpoint: https://api-v2.intrinio.com/securities/replay
+  description: Historical replay of the streaming feed via the ReplayClient.
+notes: >-
+  No provider-published AsyncAPI document was found (docs, GitHub org, /asyncapi.yaml all
+  miss); this file is an honest derivation of the streaming surface from the official
+  realtime SDKs, not a fabricated spec.

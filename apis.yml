@@ -1,36 +1,121 @@
 aid: intrinio
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: true
+  try_now: false
+  public: false
+  label: Paid (free trial) · Self-serve signup
+  confidence: high
+  source:
+    - https://intrinio.com/pricing
+    - https://intrinio.com/mcp
+  generated: '2026-07-22'
+  method: searched
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intrinio.png
 name: Intrinio
-description: "A wide selection of financial data feeds"
+description: >-
+  Intrinio is a financial data platform delivering real-time, delayed, and historical US
+  stock prices, options data with Greeks and implied volatility, standardized and
+  as-reported company fundamentals, analyst estimates, ETF and mutual fund holdings,
+  indices, corporate actions, and ESG data through a REST API, WebSocket streaming feeds,
+  bulk files, Snowflake and S3 delivery, and an official hosted MCP server that connects
+  Claude, ChatGPT, Cursor, and other AI assistants directly to its data catalog.
 url: https://intrinio.com/
 specificationVersion: '0.20'
 created: '2026-05-28'
-modified: '2026-05-28'
+modified: '2026-07-22'
 x-source: public-apis/public-apis
 x-category: "Finance"
 x-tier: 3
 x-tier-reason: bulk-registered-from-public-apis
 tags:
   - Finance
-  - Public APIs
+  - Financial Data
+  - Market Data
+  - Stocks
+  - Options
+  - Fundamentals
+  - ETFs
+  - Real-Time Data
 apis:
-  - name: Intrinio
-    description: "A wide selection of financial data feeds"
+  - name: Intrinio Web API v2
+    description: >-
+      Intrinio's REST API for financial data — stock prices, options, fundamentals,
+      estimates, ETFs, indices, corporate actions, and ESG — with API-key
+      authentication, next_page cursor pagination, and swagger-codegen-generated SDKs
+      in seven languages.
     humanURL: https://intrinio.com/
-    baseURL: https://intrinio.com/
+    baseURL: https://api-v2.intrinio.com
     tags:
       - Finance
+      - Market Data
     properties:
       - type: Documentation
-        url: https://intrinio.com/
+        url: https://docs.intrinio.com/documentation/api_v2/getting_started
+      - type: MCPServer
+        url: mcp/intrinio-mcp.yml
+      - type: OAuthScopes
+        url: scopes/intrinio-scopes.yml
+      - type: WebSockets
+        url: asyncapi/intrinio-websockets.yml
 common:
-  - type: DomainSecurity
-    url: security/intrinio-domain-security.yml
   - type: Website
     url: https://intrinio.com/
+  - type: DeveloperPortal
+    url: https://account.intrinio.com
+  - type: Documentation
+    url: https://docs.intrinio.com
+  - type: APIReference
+    url: https://docs.intrinio.com/documentation/api_v2
+  - type: GettingStarted
+    url: https://docs.intrinio.com/documentation/api_v2/getting_started
+  - type: Support
+    url: https://help.intrinio.com
+  - type: GitHubOrganization
+    url: https://github.com/intrinio
+  - type: Pricing
+    url: https://intrinio.com/pricing
+  - type: SignUp
+    url: https://account.intrinio.com/signup
+  - type: TermsOfService
+    url: https://about.intrinio.com/terms
+  - type: PrivacyPolicy
+    url: https://about.intrinio.com/privacy
+  - type: StatusPage
+    url: https://status.intrinio.com
+  - type: Blog
+    url: https://intrinio.com/blog/rss.xml
   - type: PublicAPIsListing
     url: https://github.com/public-apis/public-apis
-  - url: https://intrinio.com/blog/rss.xml
-    type: Blog
+  - type: Packages
+    url: packages/intrinio-packages.yml
+  - type: SDKs
+    url: packages/intrinio-packages.yml
+  - type: WellKnown
+    url: well-known/intrinio-well-known.yml
+  - type: MCPServer
+    url: mcp/intrinio-mcp.yml
+  - type: LLMsTxt
+    url: llms/intrinio-llms.txt
+  - type: Conformance
+    url: conformance/intrinio-conformance.yml
+  - type: ErrorCatalog
+    url: errors/intrinio-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/intrinio-lifecycle.yml
+  - type: OAuthScopes
+    url: scopes/intrinio-scopes.yml
+  - type: Authentication
+    url: authentication/intrinio-authentication.yml
+  - type: Conventions
+    url: conventions/intrinio-conventions.yml
+  - type: RateLimits
+    url: rate-limits/intrinio-rate-limits.yml
+  - type: Plans
+    url: plans/intrinio-plans.yml
+  - type: DomainSecurity
+    url: security/intrinio-domain-security.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

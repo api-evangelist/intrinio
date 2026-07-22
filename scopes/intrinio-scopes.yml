@@ -1,0 +1,26 @@
+generated: '2026-07-22'
+method: searched
+source: https://intrinio-mcp.intrinio.com/.well-known/oauth-authorization-server
+schemes:
+  - name: Intrinio MCP OAuth
+    source: well-known/intrinio-oauth-authorization-server.json
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://intrinio-mcp.intrinio.com/authorize
+        tokenUrl: https://intrinio-mcp.intrinio.com/token
+        refreshUrl: https://intrinio-mcp.intrinio.com/token
+    pkce: S256
+    dynamic_client_registration: https://intrinio-mcp.intrinio.com/register
+    revocation: https://intrinio-mcp.intrinio.com/revoke
+scopes:
+  - scope: intrinio
+    description: >-
+      Single advertised scope for the Intrinio MCP server (scopes_supported in the RFC 8414
+      authorization-server metadata and RFC 9728 protected-resource metadata). Grants access
+      to the Intrinio data catalog through the MCP surface; effective dataset entitlements
+      are governed by the account's subscription tier, not by finer-grained OAuth scopes.
+    flows: [authorizationCode]
+    sources: [well-known/intrinio-oauth-authorization-server.json]
+notes: >-
+  The core REST API (api-v2.intrinio.com) is API-key authenticated and exposes no OAuth
+  scope surface; this scope model applies to the hosted MCP server only.

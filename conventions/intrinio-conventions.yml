@@ -1,0 +1,52 @@
+generated: '2026-07-22'
+method: searched
+sources:
+  - https://docs.intrinio.com/documentation/api_v2/authentication
+  - https://docs.intrinio.com/documentation/api_v2/paging
+  - https://docs.intrinio.com/documentation/api_v2/limits
+  - https://docs.intrinio.com/documentation/api_v2/response_codes
+authentication:
+  style: api-key
+  details: >-
+    api_key query parameter, or Authorization "Bearer {api_key}" header, or
+    domain-restricted public keys via X-Authorization-Public-Key for client-side use.
+  artifact: authentication/intrinio-authentication.yml
+pagination:
+  style: cursor
+  request_params: [next_page, page_size]
+  response_fields: [next_page]
+  default_page_size: 100
+  max_page_size: 10000
+  details: >-
+    Paged responses include a next_page field; pass it back as a next_page query
+    parameter to fetch the following page. next_page is null on the last page.
+    Default 100 records per request; page_size may be raised to 10,000 (subject to
+    special limits).
+idempotency:
+  supported: false
+  details: >-
+    Read-only data API — requests are GETs and naturally idempotent, but Intrinio
+    documents no Idempotency-Key style contract.
+versioning:
+  scheme: host-based
+  current: v2 (API version 2.140.0 reported by the API root)
+  details: >-
+    The v2 Web API lives on its own host, https://api-v2.intrinio.com. The unversioned
+    root returns {"name":"Intrinio API","version":"2.140.0"}.
+error_envelope:
+  fields: [error, message]
+  artifact: errors/intrinio-problem-types.yml
+rate_limiting:
+  signaling: HTTP 429 (limits) and 503 (throttle/timeout); no documented rate-limit response headers
+  bulk_request_limits: {free: 1 per minute, paid: 1 per second, custom: contact sales}
+  throttle_limit: 100 requests per second for free-data-feed-only users
+  timeout: 25 seconds per request (dropped with 503 after that)
+  artifact: rate-limits/intrinio-rate-limits.yml
+streaming:
+  style: websocket
+  details: >-
+    Real-time equities and options prices are delivered over two-way WebSocket
+    connections (separate hosts per feed) rather than webhooks.
+  artifact: asyncapi/intrinio-websockets.yml
+request_tracing: {documented: false}
+field_expansion: {documented: false}

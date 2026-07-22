@@ -1,0 +1,32 @@
+generated: '2026-07-22'
+method: searched
+hosts:
+  - host: https://intrinio.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://api-v2.intrinio.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://intrinio-mcp.intrinio.com
+    documents:
+      - path: /.well-known/oauth-authorization-server   # RFC 8414
+        status: 200
+        file: intrinio-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource     # RFC 9728
+        status: 200
+        file: intrinio-oauth-protected-resource.json
+notes: >-
+  The OAuth authorization-server and protected-resource metadata documents are published by
+  the official Intrinio MCP server (https://intrinio-mcp.intrinio.com/mcp). They advertise
+  authorization-code + refresh-token grants, PKCE S256, anonymous dynamic client registration
+  (/register), and a single supported scope: "intrinio".
