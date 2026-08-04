@@ -7,8 +7,22 @@
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://status.intrinio.com/history.atom",
+      "feed_url": "https://status.intrinio.com/history.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://status.intrinio.com",
+      "feed_url": "https://status.intrinio.com/history.atom",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "fetched": "2026-07-20T13:31:34Z",
-  "post_count": 50
+  "fetched": "2026-08-01T15:49:00Z",
+  "post_count": 77
 }
