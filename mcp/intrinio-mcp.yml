@@ -6,34 +6,42 @@ server:
   name: Intrinio MCP Server
   transport: http
   url: https://intrinio-mcp.intrinio.com/mcp
-  description: >-
-    Official hosted Intrinio MCP server ("AI-native access to the full Intrinio data
-    catalog"). Connects Claude, ChatGPT, Cursor, Zed, Goose, Continue, and any
-    MCP-compatible client directly to Intrinio's financial data: fundamentals, stock
-    prices, options, estimates, ETFs and funds, indices, corporate events, ESG, and
-    filings. Access is included with all paid plans (Individual, Startup, Enterprise);
-    the subscription tier determines which datasets respond with live data.
+  description: 'Official hosted Intrinio MCP server ("AI-native access to the full Intrinio data catalog").
+    Connects Claude, ChatGPT, Cursor, Zed, Goose, Continue, and any MCP-compatible client directly to
+    Intrinio''s financial data: fundamentals, stock prices, options, estimates, ETFs and funds, indices,
+    corporate events, ESG, and filings. Access is included with all paid plans (Individual, Startup, Enterprise);
+    the subscription tier determines which datasets respond with live data.'
 authentication:
-  methods: [oauth2, apiKey]
+  methods:
+  - oauth2
+  - apiKey
   oauth2:
     authorization_server: https://intrinio-mcp.intrinio.com
     metadata: well-known/intrinio-oauth-authorization-server.json
     protected_resource_metadata: well-known/intrinio-oauth-protected-resource.json
-    grants: [authorization_code, refresh_token]
+    grants:
+    - authorization_code
+    - refresh_token
     pkce: S256
     dynamic_client_registration: https://intrinio-mcp.intrinio.com/register
-    scopes: [intrinio]
+    scopes:
+    - intrinio
 data_coverage:
-  - Stock Prices (real-time, delayed, 50+ years historical OHLCV, US equities and global indices)
-  - Options (full chains, Greeks, implied volatility, unusual activity)
-  - Fundamentals (15+ years standardized and as-reported statements, ratios, metrics, 9,000+ companies)
-  - Estimates (analyst consensus EPS, revenue, EBITDA, long-term growth, price targets)
-  - ETFs & Funds (holdings, weights, analytics, 118+ metadata attributes)
-  - Indices, Corporate Actions, ESG, Mutual Funds
+- Stock Prices (real-time, delayed, 50+ years historical OHLCV, US equities and global indices)
+- Options (full chains, Greeks, implied volatility, unusual activity)
+- Fundamentals (15+ years standardized and as-reported statements, ratios, metrics, 9,000+ companies)
+- Estimates (analyst consensus EPS, revenue, EBITDA, long-term growth, price targets)
+- ETFs & Funds (holdings, weights, analytics, 118+ metadata attributes)
+- Indices, Corporate Actions, ESG, Mutual Funds
 tools: []
-notes: >-
-  tools/list introspection is auth-gated: an anonymous JSON-RPC tools/list request returns
-  HTTP 401 invalid_token with a pointer to the RFC 9728 protected-resource metadata. The
-  live tool schemas therefore require an authenticated OAuth session (any active Intrinio
-  subscription); no public tool list is published, so tools[] is left empty rather than
-  guessed.
+notes: 'tools/list introspection is auth-gated: an anonymous JSON-RPC tools/list request returns HTTP
+  401 invalid_token with a pointer to the RFC 9728 protected-resource metadata. The live tool schemas
+  therefore require an authenticated OAuth session (any active Intrinio subscription); no public tool
+  list is published, so tools[] is left empty rather than guessed.'
+deployment:
+  mode: remote
+  endpoint: https://intrinio-mcp.intrinio.com/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
