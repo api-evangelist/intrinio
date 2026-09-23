@@ -1,0 +1,29 @@
+# Front Door AI Index — intrinio — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: intrinio
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: intrinio.com
+  final_host: intrinio.com
+  ownership: own
+  owner: intrinio
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 25
+  host_score: 25
+  density: 32.51
+  words: 769
+  tiers:
+    agentic: 0
+    core: 19
+    model: 6
+  ambiguous: 0
+  top_terms:
+    AI: 14
+    ChatGPT: 3
+    Claude: 3
+    gen ai: 3
+    LLMs: 2
