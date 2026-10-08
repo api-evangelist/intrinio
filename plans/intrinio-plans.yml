@@ -48,3 +48,28 @@ plans:
       Full platform access from $1,250/mo+: everything in Startup plus custom plans and
       additional datasets, white-glove onboarding, code-level support, dedicated account
       manager, SLA, and custom billing terms.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units: []
+  plans:
+  - name: Individual
+    access: paid
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Startup
+    access: paid
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units: []
+    periods: []
