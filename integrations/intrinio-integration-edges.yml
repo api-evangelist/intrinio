@@ -1,0 +1,148 @@
+edges:
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/intrinio-realtime
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: intrinio-realtime
+      version: 5.7.0
+      released: '2025-09-03'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/intrinio-realtime
+      repo_leg: github-org:intrinio
+      publisher_leg: email:intrinio.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: NuGet Gallery
+  partner: nuget
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (.NET)
+  evidence: https://www.nuget.org/packages/IntrinioRealTimeClient
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: NuGet Gallery (public registry JSON)
+    spec_file: null
+    language: .NET
+    packages:
+    - name: IntrinioRealTimeClient
+      version: 18.15.0
+      released: '2026-09-23'
+      released_field: published
+      lapsed: false
+      page: https://www.nuget.org/packages/IntrinioRealTimeClient
+      repo_leg: github-org:intrinio
+      publisher_leg: org:intrinio
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/intriniorealtime/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: intriniorealtime
+      version: 6.4.0
+      released: '2026-09-28'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/intriniorealtime/
+      repo_leg: domain:intrinio.com
+      publisher_leg: email:intrinio.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: RubyGems
+  partner: rubygems
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Ruby)
+  evidence: https://rubygems.org/gems/intrinio-realtime
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: RubyGems (public registry JSON)
+    spec_file: null
+    language: Ruby
+    packages:
+    - name: intrinio-realtime
+      version: 5.3.0
+      released: '2025-09-03'
+      released_field: version_created_at
+      lapsed: false
+      page: https://rubygems.org/gems/intrinio-realtime
+      repo_leg: github-org:intrinio
+      publisher_leg: org:intrinio
+      matched_by: github-org
+    - name: intrinio-sdk
+      version: 7.1.0
+      released: '2026-03-24'
+      released_field: version_created_at
+      lapsed: false
+      page: https://rubygems.org/gems/intrinio-sdk
+      repo_leg: github-org:intrinio
+      publisher_leg: org:intrinio
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
+checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
