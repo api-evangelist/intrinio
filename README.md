@@ -1,4 +1,4 @@
-# Intrinio (intrinio)
+# Intrinio
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,28 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-A wide selection of financial data feeds
+Intrinio is a financial data platform delivering real-time, delayed, and historical US stock prices, options data with Greeks and implied volatility, standardized and as-reported company fundamentals, analyst estimates, ETF and mutual fund holdings, indices, corporate actions, and ESG data through a REST API, WebSocket streaming feeds, bulk files, Snowflake and S3 delivery, and an official hosted MCP server that connects Claude, ChatGPT, Cursor, and other AI assistants directly to its data catalog.
 
-**APIs.yml:** [apis.yml](apis.yml)
+**Areas:** Finance · Financial Data · Market Data · Stocks · Options · Fundamentals · ETFs · Real-Time Data
 
-## Type
-- **x-type:** company
-- **x-tier:** 3 (bulk-registered from public-apis)
-- **source:** [public-apis/public-apis](https://github.com/public-apis/public-apis) — category: Finance
+## Intrinio on APIs.io
 
-## API
-- **Intrinio** — [Documentation](https://intrinio.com/)
+Everything profiled for Intrinio is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/intrinio/](https://apis.io/providers/intrinio/)** — or go straight to one of the APIs or properties below.
 
-## Tags
-Finance, Public APIs
+### APIs (1)
 
-## Notes
-This entry was bulk-registered as part of a public-apis catalog sweep on 2026-05-28.
-A real OpenAPI artifact will be added during a follow-up enrichment pass if the provider publishes one.
+- [Intrinio Web API v2](https://apis.io/apis/intrinio/intrinio-web-api-v2/) — Intrinio's REST API for financial data — stock prices, options, fundamentals, estimates, ETFs, indices, corporate actions, and ESG — with API-key…
 
-## Timestamps
-- **Created:** 2026-05-28
-- **Modified:** 2026-05-28
+### Published properties
 
-## Maintainers
-- **Kin Lane** — kin@apievangelist.com
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Intrinio Websockets](https://apis.io/asyncapis/intrinio/intrinio-websockets/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Intrinio MCP Server](https://apis.io/servers/intrinio/intrinio-mcp-server/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Intrinio Authentication](https://apis.io/security/intrinio/intrinio-authentication/)
+- [Intrinio Domain Security](https://apis.io/security/intrinio/intrinio-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Intrinio Scopes](https://apis.io/scopes/intrinio/intrinio-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Intrinio Plans](https://apis.io/plans/intrinio/intrinio-plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Intrinio Rate Limits](https://apis.io/rate-limits/intrinio/intrinio-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://intrinio.com/)
+- [Documentation](https://docs.intrinio.com)
+- [Getting started](https://docs.intrinio.com/documentation/api_v2/getting_started)
+- [API reference](https://docs.intrinio.com/documentation/api_v2)
+- [Pricing](https://intrinio.com/pricing)
+- [Sign up](https://account.intrinio.com/signup)
+- [Support](https://help.intrinio.com)
+- [Blog](https://intrinio.com/blog/rss.xml)
+- [Terms of service](https://about.intrinio.com/terms)
+- [Privacy policy](https://about.intrinio.com/privacy)
+- [GitHub](https://github.com/intrinio)
+- [Status](https://status.intrinio.com)
+
+## API Evangelist rating
+
+**Kin Score 52.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 81.7 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 63.2 |
+
+**Agent readiness 46.8** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 38.0** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/intrinio/](https://apis.io/providers/intrinio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Intrinio: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/intrinio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
